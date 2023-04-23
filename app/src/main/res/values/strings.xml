@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WeatherWise</string>
+    <string name="meter_per_second">%1$s m/s</string>
+    <string name="percentage">%1$d %%</string>
+    <string name="weatherIconDescription">This icon indicates the Weather condition</string>
+    <string name="sunRiseSet">Sun rise / set</string>
+    <string name="details">details</string>
+    <string name="wind">wind</string>
+</resources>
