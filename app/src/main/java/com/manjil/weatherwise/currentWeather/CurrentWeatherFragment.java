@@ -20,6 +20,7 @@ import com.manjil.weatherwise.dailyWeather.DailyWeatherPojo;
 
 public class CurrentWeatherFragment extends Fragment implements CurrentWeatherContract.View{
     private final String KEY = "e9e4b7b4f32444899243c63d5356580d";
+    private final String ICON_PATH = "https://cdn.weatherbit.io/static/img/icons/";
     private final double LAT = 27.7172;
     private final double LON = 85.324;
     private TextView tvWeatherDescription, tvTemperature, tvWindSpeed, tvCloudCover;
@@ -64,10 +65,11 @@ public class CurrentWeatherFragment extends Fragment implements CurrentWeatherCo
                 .getData()
                 .get(0)
                 .getClouds();
-//        String cloudCover = Integer.toString(currentWeatherPojo
-//                .getData()
-//                .get(0)
-//                .getClouds());
+        String icon = currentWeatherPojo
+                .getData()
+                .get(0)
+                .getWeather()
+                .getIcon();
 
         View view = getView();
         assert view!=null;
@@ -83,9 +85,9 @@ public class CurrentWeatherFragment extends Fragment implements CurrentWeatherCo
         tvWindSpeed.setText(getString(R.string.meter_per_second, windSpeed));
         tvCloudCover.setText(getString(R.string.percentage, cloudCover));
 
-        Log.d("current", "setCurrentWeather: successful");
+        Log.d("currentWeather", "setCurrentWeather: successful");
 
-        Glide.with(requireContext()).load("https://cdn.weatherbit.io/static/img/icons/t01d.png").into(ivWeatherIcon);
+        Glide.with(requireContext()).load(ICON_PATH + icon + ".png").into(ivWeatherIcon);
     }
 
     @Override

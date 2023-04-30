@@ -5,6 +5,7 @@ plugins {
 android {
     namespace 'com.manjil.weatherwise'
     compileSdk 33
+    compileSdkPreview "UpsideDownCake"
 
     defaultConfig {
         applicationId "com.manjil.weatherwise"
@@ -52,4 +53,7 @@ dependencies {
 
     //glide implementation
     implementation 'com.github.bumptech.glide:glide:4.15.1'
+
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    implementation 'com.google.android.material:material:1.10.0-alpha01'
 }
