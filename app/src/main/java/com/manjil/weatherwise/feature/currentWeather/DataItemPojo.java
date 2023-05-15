@@ -1,8 +1,12 @@
-package com.manjil.weatherwise.hourlyWeather;
+package com.manjil.weatherwise.feature.currentWeather;
 
+import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
 public class DataItemPojo {
+
+	@SerializedName("sunrise")
+	private String sunrise;
 
 	@SerializedName("pod")
 	private String pod;
@@ -10,44 +14,53 @@ public class DataItemPojo {
 	@SerializedName("pres")
 	private double pres;
 
+	@SerializedName("sources")
+	private List<String> sources;
+
+	@SerializedName("ob_time")
+	private String obTime;
+
+	@SerializedName("timezone")
+	private String timezone;
+
 	@SerializedName("wind_cdir")
 	private String windCdir;
+
+	@SerializedName("lon")
+	private double lon;
 
 	@SerializedName("clouds")
 	private int clouds;
 
 	@SerializedName("wind_spd")
-	private int windSpd;
+	private double windSpd;
 
-	@SerializedName("ozone")
-	private double ozone;
-
-	@SerializedName("pop")
-	private int pop;
+	@SerializedName("city_name")
+	private String cityName;
 
 	@SerializedName("datetime")
 	private String datetime;
 
+	@SerializedName("h_angle")
+	private int hAngle;
+
 	@SerializedName("precip")
 	private double precip;
 
-	@SerializedName("timestamp_local")
-	private String timestampLocal;
-
-	@SerializedName("timestamp_utc")
-	private String timestampUtc;
+	@SerializedName("station")
+	private String station;
 
 	@SerializedName("weather")
 	private WeatherPojo weather;
 
-	@SerializedName("snow_depth")
-	private int snowDepth;
+	@SerializedName("elev_angle")
+	private double elevAngle;
 
 	@SerializedName("dni")
 	private double dni;
 
-	@SerializedName("clouds_mid")
-	private int cloudsMid;
+	@SerializedName("lat")
+	private double lat;
 
 	@SerializedName("uv")
 	private double uv;
@@ -56,16 +69,13 @@ public class DataItemPojo {
 	private double vis;
 
 	@SerializedName("temp")
-	private int temp;
+	private double temp;
 
 	@SerializedName("dhi")
 	private double dhi;
 
-	@SerializedName("clouds_hi")
-	private int cloudsHi;
-
 	@SerializedName("app_temp")
-	private int appTemp;
+	private double appTemp;
 
 	@SerializedName("ghi")
 	private double ghi;
@@ -79,26 +89,39 @@ public class DataItemPojo {
 	@SerializedName("solar_rad")
 	private double solarRad;
 
-	@SerializedName("wind_gust_spd")
-	private double windGustSpd;
-
-	@SerializedName("clouds_low")
-	private int cloudsLow;
+	@SerializedName("country_code")
+	private String countryCode;
 
 	@SerializedName("rh")
 	private int rh;
 
 	@SerializedName("slp")
-	private int slp;
+	private double slp;
 
 	@SerializedName("snow")
-	private int snow;
+	private double snow;
+
+	@SerializedName("sunset")
+	private String sunset;
+
+	@SerializedName("aqi")
+	private int aqi;
+
+	@SerializedName("state_code")
+	private String stateCode;
 
 	@SerializedName("wind_cdir_full")
 	private String windCdirFull;
 
+	@SerializedName("gust")
+	private double gust;
+
 	@SerializedName("ts")
 	private int ts;
+
+	public String getSunrise(){
+		return sunrise;
+	}
 
 	public String getPod(){
 		return pod;
@@ -108,56 +131,68 @@ public class DataItemPojo {
 		return pres;
 	}
 
+	public List<String> getSources(){
+		return sources;
+	}
+
+	public String getObTime(){
+		return obTime;
+	}
+
+	public String getTimezone(){
+		return timezone;
+	}
+
 	public String getWindCdir(){
 		return windCdir;
+	}
+
+	public double getLon(){
+		return lon;
 	}
 
 	public int getClouds(){
 		return clouds;
 	}
 
-	public int getWindSpd(){
+	public double getWindSpd(){
 		return windSpd;
 	}
 
-	public double getOzone(){
-		return ozone;
-	}
-
-	public int getPop(){
-		return pop;
+	public String getCityName(){
+		return cityName;
 	}
 
 	public String getDatetime(){
 		return datetime;
 	}
 
+	public int getHAngle(){
+		return hAngle;
+	}
+
 	public double getPrecip(){
 		return precip;
 	}
 
-	public String getTimestampLocal(){
-		return timestampLocal;
-	}
-
-	public String getTimestampUtc(){
-		return timestampUtc;
+	public String getStation(){
+		return station;
 	}
 
 	public WeatherPojo getWeather(){
 		return weather;
 	}
 
-	public int getSnowDepth(){
-		return snowDepth;
+	public double getElevAngle(){
+		return elevAngle;
 	}
 
 	public double getDni(){
 		return dni;
 	}
 
-	public int getCloudsMid(){
-		return cloudsMid;
+	public double getLat(){
+		return lat;
 	}
 
 	public double getUv(){
@@ -168,7 +203,7 @@ public class DataItemPojo {
 		return vis;
 	}
 
-	public int getTemp(){
+	public double getTemp(){
 		return temp;
 	}
 
@@ -176,11 +211,7 @@ public class DataItemPojo {
 		return dhi;
 	}
 
-	public int getCloudsHi(){
-		return cloudsHi;
-	}
-
-	public int getAppTemp(){
+	public double getAppTemp(){
 		return appTemp;
 	}
 
@@ -200,28 +231,40 @@ public class DataItemPojo {
 		return solarRad;
 	}
 
-	public double getWindGustSpd(){
-		return windGustSpd;
-	}
-
-	public int getCloudsLow(){
-		return cloudsLow;
+	public String getCountryCode(){
+		return countryCode;
 	}
 
 	public int getRh(){
 		return rh;
 	}
 
-	public int getSlp(){
+	public double getSlp(){
 		return slp;
 	}
 
-	public int getSnow(){
+	public double getSnow(){
 		return snow;
+	}
+
+	public String getSunset(){
+		return sunset;
+	}
+
+	public int getAqi(){
+		return aqi;
+	}
+
+	public String getStateCode(){
+		return stateCode;
 	}
 
 	public String getWindCdirFull(){
 		return windCdirFull;
+	}
+
+	public double getGust(){
+		return gust;
 	}
 
 	public int getTs(){

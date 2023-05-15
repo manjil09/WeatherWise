@@ -1,6 +1,6 @@
-package com.manjil.weatherwise.currentWeather;
+package com.manjil.weatherwise.feature.currentWeather;
 
-import com.manjil.weatherwise.dailyWeather.DailyWeatherPojo;
+import com.manjil.weatherwise.feature.dailyWeather.DailyWeatherPojo;
 
 import retrofit2.Call;
 

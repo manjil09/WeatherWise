@@ -2,15 +2,13 @@ package com.manjil.weatherwise;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.manjil.weatherwise.currentWeather.CurrentWeatherFragment;
-import com.manjil.weatherwise.dailyWeather.DailyWeatherFragment;
-import com.manjil.weatherwise.hourlyWeather.HourlyWeatherFragment;
+import com.manjil.weatherwise.feature.currentWeather.CurrentWeatherFragment;
+import com.manjil.weatherwise.feature.dailyWeather.DailyWeatherFragment;
+import com.manjil.weatherwise.feature.hourlyWeather.HourlyWeatherFragment;
 
 public class ViewPagerAdapter extends FragmentStateAdapter {
     private final CurrentWeatherFragment currentWeatherFragment = new CurrentWeatherFragment();

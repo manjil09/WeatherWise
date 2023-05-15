@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1027059062166",
+    "project_id": "weatherwise-869f6",
+    "storage_bucket": "weatherwise-869f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027059062166:android:c53c6c2f361cec1f5ef9b7",
+        "android_client_info": {
+          "package_name": "com.manjil.weatherwise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1027059062166-bl3aoh7vu8776fljs04jfncm7qu8gsto.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqLG6YcA31_VijBAR7fo4jL3RC4lU6Gg0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1027059062166-bl3aoh7vu8776fljs04jfncm7qu8gsto.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

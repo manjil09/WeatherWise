@@ -1,4 +1,4 @@
-package com.manjil.weatherwise.dailyWeather;
+package com.manjil.weatherwise.feature.dailyWeather;
 
 import java.util.List;
 import com.google.gson.annotations.SerializedName;

@@ -4,19 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.FrameLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
-import com.manjil.weatherwise.currentWeather.CurrentWeatherContract;
-import com.manjil.weatherwise.currentWeather.CurrentWeatherFragment;
-import com.manjil.weatherwise.currentWeather.CurrentWeatherPojo;
-import com.manjil.weatherwise.currentWeather.CurrentWeatherPresenter;
-import com.manjil.weatherwise.dailyWeather.DailyWeatherFragment;
-import com.manjil.weatherwise.dailyWeather.DailyWeatherPojo;
-import com.manjil.weatherwise.hourlyWeather.HourlyWeatherFragment;
+import com.manjil.weatherwise.feature.currentWeather.CurrentWeatherFragment;
+import com.manjil.weatherwise.feature.dailyWeather.DailyWeatherFragment;
+import com.manjil.weatherwise.feature.hourlyWeather.HourlyWeatherFragment;
 
 public class MainActivity extends AppCompatActivity {
     private final CurrentWeatherFragment currentWeatherFragment = new CurrentWeatherFragment();

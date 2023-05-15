@@ -1,4 +1,4 @@
-package com.manjil.weatherwise.hourlyWeather;
+package com.manjil.weatherwise.feature.currentWeather;
 
 import com.google.gson.annotations.SerializedName;
 

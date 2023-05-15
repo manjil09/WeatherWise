@@ -58,7 +58,7 @@
 
     <style name="Caption">
         <item name="android:textSize">12sp</item>
-        <item name="android:letterSpacing">0.4</item>
+        <item name="android:letterSpacing">0.2</item>
 <!--        <item name="android:fontWeight">500</item>-->
     </style>
 </resources>

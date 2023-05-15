@@ -1,8 +1,8 @@
 package com.manjil.weatherwise.api;
 
-import com.manjil.weatherwise.currentWeather.CurrentWeatherPojo;
-import com.manjil.weatherwise.dailyWeather.DailyWeatherPojo;
-import com.manjil.weatherwise.hourlyWeather.HourlyWeatherPojo;
+import com.manjil.weatherwise.feature.currentWeather.CurrentWeatherPojo;
+import com.manjil.weatherwise.feature.dailyWeather.DailyWeatherPojo;
+import com.manjil.weatherwise.feature.hourlyWeather.HourlyWeatherPojo;
 
 import java.util.List;
 

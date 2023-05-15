@@ -2,8 +2,17 @@
     <string name="app_name">WeatherWise</string>
     <string name="meter_per_second">%1$s m/s</string>
     <string name="percentage">%1$d %%</string>
+    <string name="sunRiseSetValue">%1$s / %2$s</string>
+    <string name="kilometer">%1$s km</string>
+    <string name="mmHg">%1$s mmHg</string>
     <string name="weatherIconDescription">This icon indicates the Weather condition</string>
     <string name="sunRiseSet">Sun rise / set</string>
     <string name="details">details</string>
     <string name="wind">wind</string>
+    <string name="cloudCover">Cloud Cover</string>
+    <string name="visibility">Visibility</string>
+    <string name="dewPoint">Dew point</string>
+    <string name="pressure">Pressure</string>
+    <string name="uvIndex">UV index</string>
+    <string name="windSpeed">Wind Speed</string>
 </resources>

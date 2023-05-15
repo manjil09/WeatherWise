@@ -1,10 +1,10 @@
-package com.manjil.weatherwise.currentWeather;
+package com.manjil.weatherwise.feature.currentWeather;
 
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import com.manjil.weatherwise.dailyWeather.DailyWeatherPojo;
+import com.manjil.weatherwise.feature.dailyWeather.DailyWeatherPojo;
 
 import retrofit2.Call;
 import retrofit2.Callback;

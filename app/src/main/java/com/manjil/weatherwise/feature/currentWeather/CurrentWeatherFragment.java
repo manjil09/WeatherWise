@@ -1,4 +1,4 @@
-package com.manjil.weatherwise.currentWeather;
+package com.manjil.weatherwise.feature.currentWeather;
 
 import android.os.Bundle;
 
@@ -16,14 +16,14 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.manjil.weatherwise.R;
-import com.manjil.weatherwise.dailyWeather.DailyWeatherPojo;
+import com.manjil.weatherwise.feature.dailyWeather.DailyWeatherPojo;
 
 public class CurrentWeatherFragment extends Fragment implements CurrentWeatherContract.View{
     private final String KEY = "e9e4b7b4f32444899243c63d5356580d";
     private final String ICON_PATH = "https://cdn.weatherbit.io/static/img/icons/";
     private final double LAT = 27.7172;
     private final double LON = 85.324;
-    private TextView tvWeatherDescription, tvTemperature, tvWindSpeed, tvCloudCover;
+    private TextView tvWeatherDescription, tvTemperature, tvWindSpeed, tvCloudCover, tvVisibility, tvDewPoint, tvPressure, tvUvIndex, tvSunRiseSetValue;
     private ImageView ivWeatherIcon;
 
     @Override
@@ -65,6 +65,30 @@ public class CurrentWeatherFragment extends Fragment implements CurrentWeatherCo
                 .getData()
                 .get(0)
                 .getClouds();
+        String visibility = String.valueOf(currentWeatherPojo
+                .getData()
+                .get(0)
+                .getVis());
+        double dewPoint = currentWeatherPojo
+                .getData()
+                .get(0)
+                .getDewpt();
+        String pressure = String.valueOf(currentWeatherPojo
+                .getData()
+                .get(0)
+                .getPres());
+        double uvIndex = currentWeatherPojo
+                .getData()
+                .get(0)
+                .getUv();
+        String sunRise = currentWeatherPojo
+                .getData()
+                .get(0)
+                .getSunrise();
+        String sunSet = currentWeatherPojo
+                .getData()
+                .get(0)
+                .getSunset();
         String icon = currentWeatherPojo
                 .getData()
                 .get(0)
@@ -78,12 +102,22 @@ public class CurrentWeatherFragment extends Fragment implements CurrentWeatherCo
         tvTemperature = view.findViewById(R.id.tvTemperature);
         tvWindSpeed = view.findViewById(R.id.tvWindSpeed);
         tvCloudCover = view.findViewById(R.id.tvCloudCover);
+        tvPressure = view.findViewById(R.id.tvPressure);
+        tvVisibility = view.findViewById(R.id.tvVisibility);
+        tvDewPoint = view.findViewById(R.id.tvDewPoint);
+        tvUvIndex = view.findViewById(R.id.tvUvIndex);
+        tvSunRiseSetValue = view.findViewById(R.id.tvSunRiseSetValue);
         ivWeatherIcon = view.findViewById(R.id.ivWeatherIcon);
 
         tvWeatherDescription.setText(weatherDescription);
         tvTemperature.setText(temperature);
+        tvSunRiseSetValue.setText(getString(R.string.sunRiseSetValue,sunRise,sunSet));
         tvWindSpeed.setText(getString(R.string.meter_per_second, windSpeed));
         tvCloudCover.setText(getString(R.string.percentage, cloudCover));
+        tvVisibility.setText(getString(R.string.kilometer,visibility));
+        tvDewPoint.setText(String.valueOf(dewPoint));
+        tvPressure.setText(getString(R.string.mmHg,pressure));
+        tvUvIndex.setText(String.valueOf(uvIndex));
 
         Log.d("currentWeather", "setCurrentWeather: successful");
 
